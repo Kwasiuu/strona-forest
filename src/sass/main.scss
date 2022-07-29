@@ -1,0 +1,727 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+//NAV
+
+
+
+.hamburger-nav {
+    position: fixed;
+    height: 80px;
+    z-index: 200;
+    top: 0;
+    
+
+    &__buttons{
+        position: fixed;
+        left: 0;
+        top: 0;
+        font-size: 1.6rem;
+        padding: 10px 20px;
+        margin: 15px;
+        background-color: rgb(43, 43, 43);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        transition: transform .3s;
+    }
+
+    &__items{
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        left: -250px;
+        padding-top: 50px;
+        background-color: rgb(43, 43, 43);
+        color: white;
+        transition: transform .3s;
+        ul li{
+            list-style: none;
+        }
+
+    }
+    &__item{
+        padding: 10px 10px;
+        font-size: 1.8rem;
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+
+
+
+}
+
+.navbar{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
+
+.active {
+    transform: translateX(249px);
+}
+
+
+//HEADER
+
+.header {
+    &__img{
+        position: relative;
+        height: 30vh;
+        background-image: url('../../dist/img/jungle-1807476_1920.jpg');
+        background-position: center;
+        background-size: cover;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .header__shadow{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -10;
+        }
+
+        .header__text {
+            font-size: 0.8rem;
+            color: white;
+            z-index: 5;
+            padding: 0 20px;
+        }
+    }
+}
+
+//main
+
+.aboutus {
+
+
+    &__content {
+        .aboutus__img {
+            display: flex;
+            justify-content: center;
+            img{
+                width: 300px;
+            }
+        }
+    }
+    &__text {
+        margin: 30px auto;
+        max-width: 300px;
+
+        p{
+            margin-top: 10px;
+        }
+    }
+}
+
+
+.adventure {
+    position: relative;
+    height: 20vh;
+    margin-top: 30px;
+    background-image: url('../../dist/img/girl-5785590_1920.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: -10;
+    }
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 30%;
+        font-size: 1.2rem;
+        border: 1px solid white;
+        color: white;
+        z-index: 10;
+    }
+}
+
+.offer{
+
+    &__p{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            max-width: 280px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 6px 6px 30px -10px rgb(0, 0, 0);
+            
+            &__title {
+                margin-top: 30px;
+                font-size: 1.3rem;
+            }
+
+            &__price {
+                margin: 20px auto;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
+            &__options {
+                
+                li{
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                    list-style: none;
+
+                    .fa-check {
+                        color: rgb(9, 220, 62);
+                    }
+                }
+            }
+            &__button {
+                margin: 30px 40px;
+                padding: 10px 50px;
+                font-size: 1.1rem;
+                background: none;
+                border-radius: 5px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                box-shadow: 7px 7px 19px -10px rgb(66, 68, 90);
+                color: black;
+                
+                &--special {
+                    background-color: rgb(9, 220, 62);
+                    box-shadow: 7px 7px 19px -10px rgb(9, 220, 62);
+                }
+            }
+            &__button:hover {
+                box-shadow: inset -1px -3px 42px -23px rgba(66, 68, 90, 1);
+                
+            }
+        }
+    }
+
+    &__other {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.3rem;
+        a {
+            color: black;
+        }
+        
+
+    }
+    &__link{
+        position: relative;
+        padding: 5px 0;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+
+
+    }
+    &__link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: rgb(9, 220, 62);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s;
+    }
+
+    &__link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+        
+    }
+}
+
+// FOOTER
+
+.footer {
+    background-color: rgb(231, 231, 231);
+    &__first {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: none;
+    }
+    &__text {
+        display: flex;
+        margin: 1em auto;
+    }
+    &__items {
+        margin: 8px;
+        p {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+
+
+
+    ul {
+        list-style: none;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    &__year {
+        text-align: center;
+        margin-top: 30px;
+        height: 55px;
+    }
+}
+
+
+//CONTACT
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 2em;
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        padding: 20px;
+
+
+
+        textarea{
+            resize: vertical;
+            min-height: 100px;
+            font-size: 1.2rem;
+        }
+
+    }
+
+    &__form-top {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    &__form-input {
+        min-height: 30px;
+        font-size: 1.2rem;
+    }
+    &__form-label {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    &__form-btn {
+        font-size: 1.2rem;
+        margin: 20px 60px;
+        padding: 10px 20px;
+        color: white;
+        background-color: #007BFF;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: background-color .3s;
+    }
+    &__form-btn:hover {
+        background-color: #006bdd;
+    }
+
+
+    &__info-img {
+        position: relative;
+        background-image: url('../../dist/img/new-zealand.jpg');
+        background-position: center;
+        background-size: cover;
+        z-index: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        
+    }
+
+    &__info-img-shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: -10;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    &__info-text {
+        font-size: 1rem;
+        z-index: 5;
+        padding: 30px;
+        
+        h3 {
+            color: white;
+            font-weight: normal;
+            margin-top: 5px;
+            a {
+                text-decoration: none;
+                color: white;
+
+            }
+        }
+        p {
+            color: rgb(170, 170, 170);
+            margin-top: 20px;
+        }
+    }
+
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    width: 100%;
+    height: 500px;
+
+}
+
+
+
+
+//OTHER
+
+h2{
+    margin: 40px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.6rem;
+}
+
+.sticky-body {
+	overflow: hidden; 
+}
+
+.offer__p-website {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media(min-width: 768px){
+    .hamburger-nav{
+        height: 110px;
+
+        &__buttons {
+            font-size: 1.6rem;
+            padding: 20px 30px;
+            margin: 20px;
+        }
+
+        &__logo {
+            font-size: 2rem;
+            padding: 40px 40px;
+        }
+    }
+
+    .header {
+        &__img{
+            .header__text {
+                padding: 0 50px;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .aboutus {
+        display: flex;
+        justify-content: center;
+
+        &__content {
+            display: flex;
+
+            .aboutus__img {
+                margin: 15px;
+                img{
+                    width: 350px;
+                }
+            }
+        }
+
+        &__text {
+            margin: 15px;
+            width: 350px;
+
+        }
+    }
+
+    .offer {
+        .cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .card {
+                max-width: 400px;
+                padding: 0 50px;
+                margin: 30px;
+
+
+
+                &__title {
+                    margin-top: 50px;
+                    font-size: 1.4rem;
+                }
+    
+                &__price {
+                    margin: 30px auto;
+                }
+    
+                &__options {
+                    
+                    li{
+                        margin-bottom: 15px;
+                        font-size: 1.2rem;
+                    }
+                }
+                &__button {
+                    margin: 40px 40px;
+                    padding: 10px 50px;
+
+                }
+            }
+            
+        }
+    }
+
+    .footer {
+        &__logo {
+            display: block;
+            font-size: 2.2rem;
+            margin: 2em auto;
+            color: rgb(39, 39, 39);
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .hamburger-nav{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        overflow: hidden;
+
+        &__logo {
+            font-size: 1.8rem;
+        }
+
+        &__items {
+            
+            ul li {
+                display: inline;
+                font-size: 1.2rem;
+                height: 120px;
+                
+                a{
+                    text-decoration: none;
+                    color: black;
+                    margin: auto 20px;
+                    padding: 50px 30px;
+                    transition: background-color .3s, color .3s;
+                }
+                a:hover{
+                    background-color: black;
+                    color: white;
+                }   
+            }
+        }      
+    }
+
+    .header {
+        &__img{
+            height: 35vh;
+            .header__text {
+                padding: 0 100px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+    .aboutus {
+
+        &__content {
+
+            .aboutus__img {
+                margin: 15px 30px;
+                img{
+                    height: 320px;
+                    width: auto;
+                }
+            }
+        }
+
+        &__text {
+            margin: 15px 30px;
+            width: 400px;
+            h3 {
+                font-size: 1.3rem;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+    
+        }
+    }
+
+    .adventure {
+        height: 30vh;
+        background-attachment: fixed;
+        &__text {
+            font-size: 1.3rem;
+            font-weight: bold;
+            width: 50%;
+            height: 30%;
+        }
+    }
+
+    .offer {
+
+        &__p{
+            font-size: 1.2rem;
+        }
+
+        .cards {
+            
+            .card {
+                max-width: 400px;
+                padding: 0 50px;
+                transition: transform .3s;
+
+                &__title {
+                    margin-top: 50px;
+                    font-size: 1.4rem;
+                }
+    
+                &__price {
+                    margin: 30px auto;
+                }
+    
+                &__options {
+                    
+                    li{
+                        margin-bottom: 15px;
+                    }
+                }
+                &__button {
+                    margin: 40px 40px;
+                    padding: 10px 50px;
+
+                }
+            } 
+            .card:hover {
+                transform: scale(1.1);
+            }           
+        }
+        
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    .footer {
+        &__items {
+            margin: 20px 30px;
+
+        }
+    }
+
+    .offer__p-website {
+        padding-top: 5vh;
+        font-size: 2rem;
+    }
+
+    .contact {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0 1em 0;
+        background: none;
+        height: 500px;
+
+        &__form {
+            background-color: rgb(231, 231, 231);
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            width: 500px;
+            height: 100%;
+        }
+
+        &__info-img {
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 10px;
+            height: 100%;
+        }
+        
+        &__info-img-shadow {
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 10px;
+            
+        }
+    }
+
+    .map {
+        display: flex;
+        margin: 20px auto;
+        padding: 30px;
+        width: 40%;
+        height: 600px;
+    
+    }
+}

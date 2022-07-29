@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest - kontakt</title>
+    <script src="https://kit.fontawesome.com/01200f60ad.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+</head>
+
+<body>
+    <!-- @include 'nav.kit' -->
+
+
+    <h2>Skontaktuj się</h2>
+
+    <div class="contact">
+        <form class="contact__form">
+            <div class="contact__form-top">
+                <label for="name" class="contact__form-label">Imię</label>
+                <input type="text" class="contact__form-input" id="name">
+
+                <label for="email" class="contact__form-label">Adres e-mail</label>
+                <input type="text" class="contact__form-input" id="email">
+            </div>
+
+            <label for="msg" class="contact__form-label">Wiadomość</label>
+            <textarea id="msg" class="contact__form-textarea"></textarea>
+
+            <button type="submit" class="contact__form-btn">Wyślij</button>
+        </form>
+
+
+        <div class="contact__info-img">
+            <div class="contact__info-img-shadow"></div>
+
+            <div class="contact__info-text">
+                <h3>Informacje kontaktowe</h3>
+                <p>Adres</p>
+                <h3>Jagielońska 32 białystok 18-400</h3>
+                <p>Numer telefonu</p>
+                <h3>000-000-000</h3>
+                <p>Email</p>
+                <h3>adresfirmy@adresfirmy.pl</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d68929.77272239041!2d19.880116789207825!3d50.05598680513935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1659039426027!5m2!1spl!2spl"
+            width="100%" height="100%" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+    <!-- @include 'footer.kit' -->
+    <script src="dist/js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
